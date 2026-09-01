@@ -3,669 +3,573 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#2b3170">
-<title>FORMKO – ใบงานแพครายวัน</title>
+<meta name="theme-color" content="#933d02">
+<title>PAKO • บันทึกยอดขายรายวัน</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAYFBMVEXhtYviYgq6Xxz99/D78ub67+H++vTJekTPgTz/qqr/AAC+eUn14rW9h09/f3//f3+/fz+/v7//vz//fwD//wD88uQAAADXYg7RWgv88tv77uP769XVlmDQaCHv0ar+/fwsIloFAAAAIHRSTlP///9m2xac//8DAf8H/wICBAQEAgH+AP///v7+////CLvgQgQAABOZSURBVHja1V3peqM4FhUYTKqrZ3o2By0Iv/9bzl21gMB2Ou6vix9VDsFwuPsmxXx+6RjvePDn6+3wuPIVdPH4tSeZl79RPGy84DEcAxzogrF4qbcDlEcgyPt4QruKjnDpPX3xvQD1OdcBj9uTB118rW7wFoBAB/y3YGvwT8ALBbvv6TbfD5BeHQhwuf2J43KX23w/QJbwURnrX4Xmldmj3ut7AQpzrwXPXj/oi1dh9LcCvJORuHyJdA1CXshQ3b8PIN5PmfsdAInR43NsNk9aFmKuD7dvOEj1r5cnbc6TFLwPf0L0msI43L+HguTVrshd778PIN6LTfdDm2geageY1z+luicKDbd+qCvmHN79x324vfEY4AHnEM0D/o5vxQcIxwdcNufai8ob3gcvsDqf6Yt5pLzfqRtNbXmgzubMt43frLwH6jyeeT5zGLqw5w23Nx9BvPMRGdsA7z8+v8XzvuCdP3/cXwF4mgq947gecdkc8fe7PO+z3vmIy6Ztny9/CXcrPl/aFrsBcGT+/tUAkcvjEwDvn+N4If0PcLRu5t7CZXjUZWwQ0bTCA/1OCA0wzr2Njq3QwTQ0hATQH5HtrQDHhwDF/9b+wznXpuZ325oGCXcA/7nxv46PQAx3bwY53P84B3hP/lcxESrC5fHMOwGKX95YQ7OpbRB/j43BeykYGlw2Gws9JLYK7ZxPDH+/ZWxEX2ZTfRkQXljNQocxZl2Zr/4v0GLm8qWCaGoBxLKVA3gRjhn/iQhTQTYA+m+OF8PWGpqtCwZ8S2/hmOfZ8gEoDUB0/o2epLSGP5oAfwPCXlECg4mCLyG0MxBydVshPBNOoGz4Im2HK0D5rQHwcyQSr4udu26Wo+vws7V9XNaw52w4ctj5DfzGNqmIwBuEg9Dr9882QFLhsEYAOO8O22eEnvCBhq9roUai/8m8cwRwQ2tQRi1qTPHVfCXTng9Q5M9xB3CU+tAtLABwtnMmIf9gM0KlHqi66FHYAEQ7AMjDrQDogsYg8g7yAX7rq4ON4VgDxKo9m+h1mQuASRqBqIgwAwzrMvU9imvsoxlUEAkM6NkSe34h7/mU802F96XUeD11TV0BAXgn/tIFDJAhwdH3hFO4bPBhzF7U9UTmHmgYMkD4XY8vVyiWA3YiVqc/FnFgA/SQEoAE8FMKdyVAi1Zw6umjzWLoCV8k2rI69XENCjAAAel3KBSF5tN7hXUIJS7g80pHqUmYDH1WAIG/o3YWMsA4z9OKVnu2qMhzxyQhgEg/Um+w50ThRCwEuPQIvLM9C6eSDbCQ2Vf1wRPismpv4MCdjFKBNVWW5AuAXQQCrkARM7EcdmgOHcWybv0A2UPiMUD43ygKRG9tJxRHMKrZQPVo5SRyYUCPJWLOdqwQAM2hjKoweRkEOInQAcEiUYD1mkkKJxBgAAISPiAhYxdiEQEJ4KxCiDGHJ3gfkR2TCXShIbz5iJEZRGJyU0U2HGVJ260EOCeAqwKEJwYiNEpgaSsT9xNANgEgmqI8ATljRRwGJmeyECzJbMicyMR1HH+/M0Ds9IkKE0C7AUi+pQDo2BvWZnxmuoiUJICG2XIbEI7QHAGKEej2zoABBjbXdwH4+S9WMr8DuNYAkcUgwqsyPcGDX8K1XjWoAhhE56MoFJ4kfJ0KsN6EnohSjgBv450B/jOrcBOgTwDxBHLLCc/liTP9pDz2pQwii9G2LGJ3LNnMFVgAhpJtFwPD/4DC1k4mCMDhd6HgmBJhBhizF2EtdhkgURRO9DVAJgx7thIgcQy04UPEb46ieWucW4eNpGyeYhEpDhvs+KQ6YCgBopkZUGVNtKoJQQNGuV/JIZaHDLCb+3+A0MPXFV/XoSLAKbqBbWMk/0j+DkLrf9cUrACSHQQlDGIZUYpWSviyLZ+3AP0taXEkgGDo02t0FFgOekGhIVnl9DY3tTTHAEknwAmBrxMOi066Jc7F+6uko6cWKy4AkcXZZaOIQVgBdkRuYOds0OAHNO74wwcBBFshADWQ3gPEh3+AdaVbwc05mPHkyQqAootkq12hxR0Zx4WjDXbn5CzASi0lA9BET/gQFml4TwIYJLQ2HEj7BNBUggXfsnoXUdNk5vI16JQLW50Azhh1FTDADaNXWSuAGE9iZGnZKylA0gpI443mwnuANvEBiUHMuYljaYggeepQAETjja5WAbKboIApqiWDf1AMAgp6nJURLnXeRqTgfTwA2BVR67yYFMEtFcBkfoECNUCRfrGIHMWg/QgZYCdcd+gK+8Krc/l5+A9R8Ahg5o26cSzXYLjTlaZSvArwB7Wc3W6hlWQRBR77PTZbQmSytOg/gwK0KMoSXF/uDwGS8GkgRLWkNcUJluVe9BSUlP3xDiDCAOPHIWsCyG+1iLNG1bM57NDw/wJafLnejgHamZP2lOY4Z+YcyODdgprtTmy122hRcrEtgCvjBt2Hs0zZdC2ZQiOR4AFA4o3kIQiwfnrHADWMQkspFCz0LOWsIWWDmcXLyrkSAySfHDcU/LzcDijYdUWmKfnhxsggzcyHjZmgrgkwBVIZIKsWhUB0YychnAK8ZRbX+ZSZs6ubi7tSQkb3qYKkuGCRqcscdxjOcnRSkVr0LGkxx6js3MG54I3FsFUUvNcURABFToxCLxUWTizQjcx1FAdHF6tveKApCiRZec638BPHbuTLpwSdI3SHHtzEImQKocliXwOMEaMlV5RUyAvYWo0qx0NPRHFHswiORBQKnY3tV4pDXelJCCB4lwJgjxmBpqUA8DocA4SvuwqgpHPNQEmjJZIxpDICLJNsEsNA8f8WIGrfkgDCOQU4XE3ZEvbEwgpgqItSbT9XZhVrcjXofpbCcUZEyGliOolPcExBNQbo6rRkhkq7KZe50k0tbgdwm43YXVQYEi0gclpjL3GfWBAKGZcktAhZyzls0ylYKOoMLwIEP5f9c64gdrmgOK1OM4Q5ohWfY2GwKSUKJirkKTkBAtg9BhiOAHLlN0WLsax/5RoYRbU5x1pvRYIaNWQMq4b8msjguYkBzujQvwKQfYmacZvyOiq3J4Rk21OWCo5FEygyClLCCeodhel4b8lkJZMsSl5mU/c6AsiWM/3WRi5cGzpAW6NaZIwelMjW0DcSwEgho/fOpKQpSqFm1cSMAg73JYCh8HNINfQNIUgNDTW3s1UAhtS81TympJhyWw2IOdAJKQ/jkO0QoH8BIBqNdKOQ6nEMUC3GbVOFQK2oanxoi1Yq8dlkeKpC7F6L5xOASg4rAIN8i+NNiWPjEoWtWK0LZRampa2QQhL4zseyTLMkP2R7jwFKUJEB5osJoEv8kgxEq/Qh+Xp6hrpgKhqWOZzUozwVKzp6Uica1mkwuKkJ7wCu/bwH6NF5Y8QxseRIFpUASuGzSwCLWgO/Vc4NU24dY7TZ3DPJJ+OQIUUPaAuQZaYTDiUKcjAMACMZKwrjBeDNiXb1CeDCwXvP7AxLEcFp8s8y223SH6nhlS2eHUDypOgaqiI9h2d6W4ivOJbNvTCPFSUrJV5q9s09OBXP/Ex0x3MoLs6tP3u7z35YrN0hQL5dT/4rBcGFrpKF5eZYX3RvCOKAsAgCqnTfa7mUWxZ0SwlV2ObTaxR+su8ns2rPJ6Seyg4gaNjUIwWw8hOK7hYX3hYpK2spPLc/2RZynkvF+1Wq5/Cfka9RWB0Swiky0akdNIHMCD7njilI1e2fRADDwVY5SeG4v9SnLpIAJE4SLLNqu8QVoSSSq4+AYbgFbSlh/wAgRjarE71PKBp9hwC10ZabAq78HfU26hZ3bhMOw0HrMwz0rVB0SpFO2MIx9LA1VB3JU4CcobvDUahyhuZhczs/K6R38joWoSYs5BYtD5wcAnTbuzabwLk0sQVI3bhKJoofSt3cXKbxFXU766ebZ+eycrPSn1MsVA3igy63qyT0VneMTzzJwZ19KLulvqa3qxmamt0HINkIZxyuaNn7htCYZybvvNzTpSpIkedVAIPPKnAgisFlUpXvwSMC6YTCNscrKnZ82c9ubWfOyML6rWRgoBG0g+S9Kyq6dRc2NHhoXpnHyOzwG4tVkNW5hvAS7wVgNqAchJwfLwFk49uSr4psDfGTCSv3mFcNgE8N+zoeMFHr6h6PSNXv4T23Fgpl97eHc+4YI1+fWu7APV/pmeOxbn3Gdo4HxcH7etDGoePgCYDNQNjxkE9d3XrAX4wHKJCgkQ5XvT9av1Lm9xM/GCjRpMhEEwBnE0HF0OizAD0FCn1ukUM06yqAzPzkzkqV548ppqH+xER1df8Y4NNLISH26LWtpdGiw/DApRCDeC+ZVOk32W9gwkhNYoLZzzxsdQ5xW8A8xVemj1wdJkwalmJEZXsI80M9tYOMJ41YJ0pMo+YiZVn4AYuf0WMsBlgd+LGMxPyEh8EHR92Pvp+LhlkSUAKH9nnVUjFncTps5R+y+PqEAFIPv9MGO4W/Awa2No10aeZeUcWFbMiBBVrLjlKklvb16bBj3cg5BIh5uQ5FcFwfqMyHp7hFZ35SwzUN0IjBzHpDhVdN+yaesXjI5CcASjo39WXrYXVFrVAA9txP5WYlzZnqbBxWX1yuDOPr4f0wN0xjIUc6smkmNr2Xc6WGpH5CHjxggEIf7OVQehItmczUSsN8lgEaqUjTcNhwAlCaiffhPEJ11RwK4uPzWnShZoeWTLDkdkujZ9IN4ZrforMkJvBYQdelAYCDY9w2tG+tAV/scE65GEWJ4wYgtvAKgHmqiJvopAzrBiAVVImCx5E3NbTLkYAmkxHgT743lxsouXAFwLUAOBugplp07UphQUFLbix3BDBqreNk2rYeqjhai7KSEWSAjuPMDDBWFJxNnn3stNuNjjEDxPYLDf1FO51pcWPqox3vewRI5VMZneGKWwEQ1UL7W8allnwnzQDsha0lQBRS1pFwPvE9bgZ7juL/1MSW4aNCSSz3YLn4iidWrP1ppyS5tWgSwHmRBo+dT81ga7DnKGXKJeQ5v/T6kYSeihszzScAqaIMmMz9PxYpWFPXKZd9qSLYV0XkvQTqaFQxXHagKL5sMInieZku6ShyWqjOb9ESAqkUYMS5oFWJldtiNtWfzoKANFxWjOcdB9RFodlqmDQspAedRogscR8Gfa54DMoQJiuNxdRo57ucxYO+GM8rBxxv7Sw5yLRRnkDAAIYAyhNjrkEaI7I5IQN59H4HUBygP11YohT8PNqZpXhBV3SM4BmTCQqwmPEU8ipAqSCGBBCFNOoQTXDnaz2KEdFiyLYRKfiEMDcQ2RsUAFO3rgKIiRbVy23dO97HjEc2Zjem3K6l4MvKGKUETNy43gC0O4C3NCxXAEyV6BO595sx5XtLkb0vAXpeqGOzTw4KEGKUj0XadUDaYc0AsYxAQUIFcJMPNlW4HvQuR+XbxQJJaw2zi6Yr17Dk2ZpkTrDBWQME6Y1dCVAbnGeGdzMqL4sNNkxuiDDFUVGaILJuQnwLj0xFADgs1GeiRpqnCdgGwLNUpLHYQJdrVHridnWqPJcFxi8D5G8ZBrhKeslDYkANSubQUMc0BnCeKIXGco1iwUubyVq+LWakDX9Eh08VNsqJokx92EQpGYTqVwrAO6b4AxFsLHj5/PxtPAqtNf8J3E8QCsYCIEoNTstgBLoqlTkwpRl0Ws/B80YC8LSu1Vwy9PlfCq1br0Y1A3S41NhVGUwUpMUuNI1spR898C/sZDA5oVYIXCQUTCz2p4H0HuD/WqE1BX5Oe0/gn9LINgAcWAZ7nn0J3Oaf1ptMjmDsuHAnHqnpaBWDbbSsn1y2hub6x6UNUBxxMduB4ydk4DpddiNaTBqzThR6pbE9ADWkkK1/BPBg4Z8uHg/70ncGmDu8ZKhjBkhBreYYIc0H8EggElCE8REFT5dO3u+XenMPBah+GIM/eS6tGIiYCVCm7jlm7DmLLB03L3EZSJ2jlZ67/9Li0/32KApQlzPMNoeilJlhPWRKU3dLz8Po2vnU9Xig8M5z+YRV5wzg2fLdz8MNZgIXMmZd6MltQYL008iyVNRYLWSw4qdVobxqyGGBsZ/M4M5M9OkCaHQvB1u4ULsyLeCSkiCuTTSyZmkb5YZUzeYWCQdESxokOODv+RJyhPjH8SZHadG7lJfTT2lkQLpIqSFQr9tHg3/ex3u4CD9x+awNomeoM1MsMixXvh4s13+wzcAz2xhgCnVptWDl0Hak9NrQhexWaXIYyA1I7kWkDt75PgPPbARRbKWxa3FXr78PxrxwPvUxXSi2aSCM/lFF+qm9Pu64GcmuyeHba1prgL6qOaUFnArQ+8M06fnNSB5u51I2Us/SsrLBftMM8wjjC9u5HORQOkvgpMX1GGBu5nlRp5NM7qUNcZpbCuVGfgJ4e5Ba5FZtu9FZtzxf2VLoYFOmFrnOzQa/UFLhUwvzyqZM7W2tNtKTZhPOxzBcuSnAEXdf39aqtTHY1wBuRgMO/O/LG4M9sbXai7s8nPvf17dW+wU2p/sVtvf7m2+Q+CtsMfm336TzF9jm9O+/UeyvstXu33mz4l9hu+fNhtlflcYgmdEbNsyuthz/GqeVt+/acjxt2v78dvyNoJ426H/Tpu3FfvW67f2TG1fJZQOZ5Tdue683V9P9kgsc1Cy/hu4rf3pBWD2Or2zQf8HrJQ5++x+v+ITgnNJD+hMHz/zxClZbIN+Pv+Sva6S/lKFl5Md//oP2bfvin//4P6zlgDTqPZn1AAAAAElFTkSuQmCC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#2b3170;
-  --navy-dark:#232961;
-  --green:#186b3a;
-  --green-dark:#125730;
-  --bg:#f2f4f8;
-  --card:#ffffff;
-  --line:#d9dee9;
-  --line-soft:#e8ecf4;
-  --head:#eef1f7;
-  --text:#1c2033;
-  --muted:#6b7288;
-  --danger:#b3261e;
-  --radius:14px;
+  --bg:#faf5ef; --card:#fff; --ink:#2b1c12; --muted:#8b7565; --line:#eee0d1;
+  --brand:#e06005; --brand-dark:#933d02; --brand-soft:#fdf1e2;
+  --cash:#15803d; --qr:#0f766e; --bank:#1d4ed8; --danger:#dc2626;
+  --radius:16px; --shadow:0 1px 2px rgba(93,50,10,.06),0 8px 24px rgba(93,50,10,.09);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{
-  font-family:"Noto Sans Thai","Noto Sans Myanmar","Padauk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:var(--bg);color:var(--text);font-size:16px;line-height:1.5;
-  padding-bottom:calc(96px + env(safe-area-inset-bottom));
+  font-family:'Noto Sans Thai',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--bg); color:var(--ink); font-size:15px; line-height:1.55; padding-bottom:190px;
 }
-input,select,textarea,button{font-family:inherit;font-size:inherit;color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding:0 14px}
 
-/* ---------- header ---------- */
-.appbar{
-  position:sticky;top:0;z-index:40;background:#fff;
-  border-bottom:1px solid var(--line);
-  padding:10px 16px 12px;
-  text-align:center;
-}
-.appbar .brand{height:38px;width:auto;display:block;margin:0 auto 4px}
-.appbar .ttl{font-weight:700;letter-spacing:.2px;font-size:17px}
-.appbar small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:1px}
+header{background:linear-gradient(135deg,var(--brand-dark),var(--brand));color:#fff;
+  padding:22px 0 46px;border-radius:0 0 26px 26px}
+header .wrap{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:50%;display:block;flex:none;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);background:#fdf3e6}
+.h-title{font-weight:700;font-size:18px;line-height:1.2}
+.h-sub{font-size:12.5px;opacity:.8}
+.gear{margin-left:auto;background:rgba(255,255,255,.14);border:0;color:#fff;width:36px;height:36px;border-radius:11px;font-size:16px;cursor:pointer}
 
-.wrap{max-width:720px;margin:0 auto;padding:16px}
+main{margin-top:-32px}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
+.card-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.card-h h2{margin:0;font-size:14.5px;font-weight:700}
+.hint{font-size:12px;color:var(--muted)}
+label.lbl{display:block;font-size:12px;font-weight:600;color:var(--muted);margin:0 0 5px}
 
-/* ---------- card ---------- */
-.card{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:18px 16px;margin-bottom:16px;
-}
-.card-title{
-  display:flex;align-items:center;gap:10px;
-  font-weight:700;font-size:18px;margin:0 0 16px;
-}
-.card-title::before{
-  content:"";width:4px;height:20px;border-radius:2px;background:var(--green);flex:0 0 4px;
-}
+input[type=date],input[type=text],input[type=number],select,textarea{
+  width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:12px;
+  font-family:inherit;font-size:16px;background:#fffcf8;color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--brand);background:#fff}
+select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238b7565' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat:no-repeat;background-position:right 13px center}
 
-/* ---------- fields ---------- */
-.field{margin-bottom:14px}
-.field:last-child{margin-bottom:0}
-label.lb{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
-label.lb .req{color:var(--danger)}
-label.lb .opt{color:var(--muted);font-weight:400}
-.hint{font-size:12.5px;color:var(--muted);margin-top:5px}
-.inp,.ta{
-  width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;
-  padding:12px 12px;outline:none;transition:border-color .15s, box-shadow .15s;
-}
-.ta{min-height:78px;resize:vertical}
-.inp:focus,.ta:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(43,49,112,.12)}
-.inp.bad,.ta.bad{border-color:var(--danger);box-shadow:0 0 0 3px rgba(179,38,30,.12)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media (max-width:359px){.row2{grid-template-columns:1fr}}
+.chips{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 13px;font-size:13px;
+  font-family:inherit;cursor:pointer;color:var(--muted);font-weight:500}
+.date-th{margin-top:10px;font-size:13px;color:var(--brand);font-weight:600;background:var(--brand-soft);
+  display:inline-block;padding:5px 12px;border-radius:9px}
 
-/* chips (quick pick for ขั้นตอนแพค) */
-.chips{margin-top:8px}
-.chiprow{display:flex;flex-wrap:wrap;gap:6px}
-.chiprow.sepline{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line-soft)}
-.chips-worker{display:flex;flex-wrap:wrap;gap:8px}
-.chips-worker{margin:-4px 0 14px}
-.chips-worker:empty{display:none}
-.chip{
-  border:1px solid var(--line);background:#fff;border-radius:999px;
-  padding:6px 11px;font-size:13px;line-height:1.35;color:var(--text);cursor:pointer;
-}
-.chip:active{background:var(--head)}
-.chip.on{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:600}
+.entry{border:1.5px solid var(--line);border-radius:14px;padding:13px;margin-bottom:11px;background:#fffdfa}
+.entry.cash{border-left:4px solid var(--cash)}
+.entry.qr{border-left:4px solid var(--qr)}
+.entry.bank{border-left:4px solid var(--bank)}
+.entry-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.entry-no{font-size:12px;font-weight:700;color:var(--muted)}
+.del{border:0;background:#fff0f0;color:var(--danger);border-radius:9px;width:30px;height:30px;font-size:15px;cursor:pointer;flex:none}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:#f5ece2;padding:4px;border-radius:12px;margin-bottom:10px}
+.seg button{border:0;background:transparent;padding:9px 4px;border-radius:9px;font-family:inherit;font-size:13px;
+  font-weight:600;color:var(--muted);cursor:pointer}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.10)}
+.row2{display:grid;gap:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.amt-wrap{position:relative}
+.amt-wrap input{padding-right:44px;font-weight:700;font-size:18px;text-align:right}
+.amt-wrap .baht{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:600;font-size:14px}
 
-/* ---------- size tabs ---------- */
-.tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
-.tab{
-  border:1px solid var(--line);background:#fff;border-radius:10px;
-  padding:12px 6px;font-weight:600;font-size:14.5px;white-space:nowrap;cursor:pointer;transition:.15s;
-}
-.tab.active{background:var(--navy);border-color:var(--navy);color:#fff}
-.tab.wide{grid-column:1 / -1}
+/* ---- attachment groups ---- */
+.att{margin-top:13px;border-top:1px dashed var(--line);padding-top:12px}
+.att-title{font-size:11.5px;font-weight:700;color:var(--muted);margin-bottom:8px;letter-spacing:.3px}
+.att-g{margin-bottom:10px}
+.drop{width:100%;display:flex;align-items:center;gap:11px;padding:13px 12px;border:2px dashed var(--g);
+  background:var(--gs);border-radius:14px;font-family:inherit;cursor:pointer;text-align:left}
+.drop:active{transform:scale(.995)}
+.drop.has{border-style:solid}
+.drop .ic{width:40px;height:40px;border-radius:12px;background:#fff;display:grid;place-items:center;
+  font-size:20px;flex:none;box-shadow:0 1px 3px rgba(0,0,0,.10)}
+.drop .tx{flex:1;min-width:0;line-height:1.3}
+.drop .tx b{display:block;font-size:14px;color:var(--g);font-weight:700}
+.drop .tx small{font-size:11px;color:var(--muted)}
+.drop .cnt{flex:none;font-size:12px;font-weight:800;color:#fff;background:var(--g);
+  border-radius:999px;padding:4px 11px;white-space:nowrap}
+.drop .plus{flex:none;font-size:22px;font-weight:700;color:var(--g);width:30px;text-align:center}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.thumb{position:relative;width:66px;height:66px;border-radius:12px;overflow:hidden;border:1.5px solid var(--line);background:#fff}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .doc{display:grid;place-items:center;height:100%;font-size:10px;color:var(--muted);padding:3px;text-align:center;word-break:break-all}
+.thumb .x{position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(0,0,0,.62);
+  color:#fff;font-size:13px;line-height:1;cursor:pointer;padding:0}
+.thumb.more{border:2px dashed var(--line);display:grid;place-items:center;font-size:24px;color:var(--muted);
+  background:#fff;cursor:pointer;font-family:inherit}
 
-.grp-label{font-size:14px;font-weight:600;margin:14px 0 8px}
-.sizegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-@media (max-width:359px){.sizegrid{grid-template-columns:repeat(3,1fr)}}
-.cellbox{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
-.cellbox .name{
-  background:var(--head);text-align:center;font-weight:700;font-size:14px;
-  padding:8px 4px;border-bottom:1px solid var(--line-soft);
-}
-.cellbox .qty{
-  width:100%;border:0;text-align:center;padding:12px 4px;font-size:17px;
-  font-weight:600;outline:none;background:#fff;
-}
-.cellbox.filled{border-color:var(--navy)}
-.cellbox.filled .name{background:var(--navy);color:#fff}
-.cellbox .qty:focus{background:#f7f9ff}
+.add{width:100%;border:1.5px dashed var(--brand);background:var(--brand-soft);color:var(--brand);
+  border-radius:13px;padding:13px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer}
 
-.sep{border:0;border-top:1px dashed var(--line);margin:18px 0 14px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);padding:11px 0 max(12px,env(safe-area-inset-bottom));z-index:40}
+.sum{display:flex;gap:6px;margin-bottom:9px}
+.sum div{flex:1;text-align:center;background:#faf2e9;border-radius:11px;padding:6px 3px}
+.sum .k{font-size:10.5px;color:var(--muted);font-weight:600}
+.sum .v{font-size:13.5px;font-weight:700}
+.sum .cashv{color:var(--cash)} .sum .qrv{color:var(--qr)} .sum .bankv{color:var(--bank)}
+.submit{width:100%;border:0;border-radius:14px;padding:15px;font-family:inherit;font-size:15.5px;font-weight:700;
+  color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-dark));cursor:pointer}
+.submit:disabled{opacity:.5}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px;padding:0 2px}
+.total-line span:first-child{font-size:12.5px;color:var(--muted);font-weight:600}
+.total-line b{font-size:20px}
 
-/* custom sizes */
-.customrow{display:grid;grid-template-columns:1fr 96px 42px;gap:8px;margin-bottom:8px;align-items:center}
-.btn-del{
-  border:1px solid var(--line);background:#fff;border-radius:10px;height:44px;
-  color:var(--danger);font-weight:700;cursor:pointer;
-}
-.btn-add{
-  width:100%;border:1.5px dashed var(--navy);background:#fff;color:var(--navy);
-  border-radius:12px;padding:14px;font-weight:600;cursor:pointer;
-}
+.prog{height:5px;background:#eee0d1;border-radius:99px;overflow:hidden;margin-bottom:9px;display:none}
+.prog i{display:block;height:100%;width:0;background:var(--brand);transition:width .3s}
+.msg{display:none;padding:11px 13px;border-radius:12px;font-size:13px;font-weight:600;margin-bottom:10px}
+.msg.err{display:block;background:#fef2f2;color:#b91c1c}
+.done{display:none;text-align:center;padding:34px 16px}
+.done .tick{width:64px;height:64px;border-radius:50%;background:var(--brand-soft);color:var(--brand);
+  display:grid;place-items:center;font-size:31px;margin:0 auto 14px}
+.done h3{margin:0 0 6px;font-size:19px}
+.done p{margin:0 0 18px;color:var(--muted);font-size:13.5px}
+.done .again{border:0;background:var(--brand);color:#fff;border-radius:13px;padding:13px 26px;
+  font-family:inherit;font-size:14.5px;font-weight:700;cursor:pointer}
+.done ul{list-style:none;padding:0;margin:0 0 18px;text-align:left;font-size:13px}
+.done li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding:7px 2px}
+.done li span{text-align:left}
 
-/* total */
-.total{
-  margin-top:16px;background:var(--navy);color:#fff;border-radius:12px;
-  padding:18px 16px;display:flex;align-items:center;justify-content:space-between;
-}
-.total .t-l{font-weight:600}
-.total .t-r{font-size:26px;font-weight:700}
-.total .t-r span{font-size:15px;font-weight:400;margin-left:4px}
-.breakdown{font-size:13px;color:var(--muted);margin-top:10px;word-break:break-word}
-
-.foot{text-align:center;color:var(--muted);font-size:13px;padding:4px 0 6px}
-
-/* ---------- bottom bar ---------- */
-.bottombar{
-  position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;
-  border-top:1px solid var(--line);
-  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-}
-.bottombar .inner{
-  max-width:720px;margin:0 auto;display:grid;grid-template-columns:130px 1fr;gap:12px;
-}
-.btn{border-radius:12px;padding:16px 10px;font-weight:700;cursor:pointer;border:1px solid transparent}
-.btn-ghost{background:#fff;border-color:var(--line);color:var(--text)}
-.btn-primary{background:var(--green);color:#fff}
-.btn-primary:active{background:var(--green-dark)}
-.btn[disabled]{opacity:.6;cursor:not-allowed}
-
-/* toast */
-.toast{
-  position:fixed;left:50%;transform:translateX(-50%);bottom:110px;z-index:60;
-  background:#1c2033;color:#fff;padding:12px 18px;border-radius:999px;font-size:14px;
-  box-shadow:0 8px 24px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:opacity .2s, bottom .2s;
-  max-width:90vw;text-align:center;
-}
-.toast.show{opacity:1;bottom:120px}
-.toast.err{background:var(--danger)}
-.toast.ok{background:var(--green)}
-
-/* setup banner */
-.banner{
-  background:#fff6e6;border:1px solid #f0d9a8;color:#7a5a12;border-radius:12px;
-  padding:12px 14px;font-size:13.5px;margin-bottom:16px;
-}
-.banner b{color:#5f4509}
-/* บรรทัดภาษาพม่า / မြန်မာစာကြောင်း */
-.mm{
-  display:block;font-family:"Noto Sans Myanmar","Padauk",sans-serif;
-  font-weight:400;font-size:12.5px;line-height:1.6;color:var(--muted);margin-top:1px;
-}
-.appbar .ttl .mm{font-size:13px;color:var(--muted);margin-top:2px}
-.card-title .mm{font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
-label.lb .mm{font-size:12.5px}
-.grp-label .mm{font-size:12px}
-.hint .mm{font-size:12px;margin-top:2px}
-.chip{line-height:1.3;text-align:center}
-.chip .mm{font-size:11px;color:inherit;opacity:.72;margin-top:0}
-.chip.on .mm{color:#fff;opacity:.85}
-.tab{line-height:1.3;padding:9px 6px;white-space:normal}
-.tab .mm{font-size:11.5px;font-weight:500}
-.tab.active .mm{color:#dfe2f5}
-.btn{line-height:1.3}
-.btn .mm{font-size:12px;font-weight:600;opacity:.85}
-.btn-primary .mm{color:#dff0e5;opacity:1}
-.btn-add .mm{font-size:12px;color:var(--navy);opacity:.8}
-.total .t-l .mm{color:#c8cbe6}
-.foot .mm{font-size:12px;margin-top:2px}
-.hidden{display:none !important}
+dialog{border:0;border-radius:18px;padding:18px;max-width:400px;width:92%;box-shadow:var(--shadow);font-family:inherit}
+dialog::backdrop{background:rgba(60,30,5,.42)}
+dialog h3{margin:0 0 4px;font-size:16px}
+dialog p{margin:0 0 12px;font-size:12.5px;color:var(--muted)}
+dialog .actions{display:flex;gap:8px;margin-top:12px}
+dialog button{flex:1;border:0;border-radius:11px;padding:11px;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer}
+dialog .ok{background:var(--brand);color:#fff} dialog .cancel{background:#f5ece2;color:var(--ink)}
+.foot{text-align:center;font-size:11.5px;color:var(--muted);padding:6px 0 4px}
 </style>
 </head>
 <body>
-
-<div class="appbar">
-  <img class="brand" src="data:image/png;base64,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" alt="FORMKO">
-  <div class="ttl">ใบงานแพครายวัน<span class="mm">နေ့စဉ် ထုပ်ပိုးဖောင်</span></div>
-  <small id="todayLabel"></small>
-</div>
-
-<div class="wrap">
-
-  <div class="banner hidden" id="setupBanner">
-    <b>ยังไม่ได้ตั้งค่าปลายทาง Google Sheet</b><br>
-    เปิดไฟล์ <code>index.html</code> แล้วใส่ URL ของ Apps Script ที่ตัวแปร <code>API_URL</code>
-    หรือเปิดลิงก์แบบ <code>?api=&lt;URL&gt;</code>
+<header>
+  <div class="wrap">
+    <img class="logo" src="data:image/png;base64,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" alt="PAKO SHOP">
+    <div>
+      <div class="h-title">บันทึกยอดขายรายวัน</div>
+      <div class="h-sub">เงินสด · QR แม่มณี · เงินโอนเข้าบัญชี</div>
+    </div>
+    <button class="gear" id="gear" title="ตั้งค่า">⚙</button>
   </div>
+</header>
 
-  <!-- ============ ข้อมูลงาน ============ -->
+<main class="wrap" id="formArea">
   <div class="card">
-    <h2 class="card-title"><span>ข้อมูลงานแพค<span class="mm">ထုပ်ပိုးအလုပ် အချက်အလက်</span></span></h2>
-
-    <div class="row2">
-      <div class="field">
-        <label class="lb" for="f_date">วันที่ <span class="req">*</span><span class="mm">ရက်စွဲ</span></label>
-        <input class="inp" type="date" id="f_date">
-      </div>
-      <div class="field">
-        <label class="lb" for="f_worker">ชื่อพนักงาน / ทีมแพค <span class="req">*</span><span class="mm">ဝန်ထမ်း / အဖွဲ့</span></label>
-        <input class="inp" type="text" id="f_worker" placeholder="เช่น/ဥပမာ ป้าแดง" autocomplete="off">
-      </div>
+    <div class="card-h"><h2>วันที่ของยอดขาย</h2><span class="hint">วันที่เกิดรายการ</span></div>
+    <input type="date" id="saleDate">
+    <div class="chips">
+      <button class="chip" data-day="0">วันนี้</button>
+      <button class="chip" data-day="-1">เมื่อวาน</button>
+      <button class="chip" data-day="-2">2 วันก่อน</button>
     </div>
-    <div class="chips chips-worker" id="workerChips"></div>
-
-    <div class="row2">
-      <div class="field">
-        <label class="lb" for="f_order">เลขออเดอร์ <span class="req">*</span><span class="mm">အော်ဒါနံပါတ်</span></label>
-        <input class="inp" type="text" id="f_order" inputmode="numeric" placeholder="เช่น/ဥပမာ 2608001">
-      </div>
-      <div class="field">
-        <label class="lb" for="f_model">รุ่น <span class="req">*</span><span class="mm">မော်ဒယ်</span></label>
-        <input class="inp" type="text" id="f_model" placeholder="เช่น/ဥပမာ เสื้อโปโล">
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="lb" for="f_color">สี / ลาย <span class="req">*</span><span class="mm">အရောင် / ဒီဇိုင်း</span></label>
-      <input class="inp" type="text" id="f_color" placeholder="เช่น/ဥပမာ กรม-ขาว / ลายพราง">
-    </div>
-
-    <div class="field">
-      <label class="lb" for="f_step">ขั้นตอนแพค <span class="req">*</span><span class="mm">ထုပ်ပိုးအဆင့်</span></label>
-      <input class="inp" type="text" id="f_step" placeholder="เช่น/ဥပမာ พับ, ใส่ถุง">
-      <div class="chips" id="stepChips"></div>
-      <div class="hint">แตะเลือกได้หลายขั้นตอน (แตะซ้ำเพื่อเอาออก) หรือพิมพ์เองได้เลย<span class="mm">အဆင့်များစွာ ရွေးနိုင်သည် (ထပ်နှိပ်လျှင် ပြန်ဖြုတ်သည်)</span></div>
-    </div>
-
-    <div class="field">
-      <label class="lb" for="f_note">หมายเหตุ <span class="opt">(ไม่บังคับ)</span><span class="mm">မှတ်ချက် (မဖြည့်လည်းရ)</span></label>
-      <textarea class="ta" id="f_note" placeholder="เช่น/ဥပမာ งานด่วน / รอป้าย / ของเสีย 2 ตัว"></textarea>
-    </div>
+    <div class="date-th" id="dateTh">—</div>
   </div>
 
-  <!-- ============ ไซส์ ============ -->
   <div class="card">
-    <h2 class="card-title"><span>ไซส์ &amp; จำนวน<span class="mm">ဆိုက် &amp; အရေအတွက်</span></span></h2>
-
-    <div class="tabs">
-      <button type="button" class="tab" data-mode="num">ไซส์ตัวเลข 8–28<span class="mm">ဂဏန်းဆိုက်</span></button>
-      <button type="button" class="tab active" data-mode="alpha">ไซส์ตัวอักษร XS–5XL<span class="mm">စာလုံးဆိုက်</span></button>
-      <button type="button" class="tab wide" data-mode="all">แสดงทั้งหมด<span class="mm">အားလုံးပြပါ</span></button>
-    </div>
-
-    <div id="numWrap" class="hidden">
-      <div class="grp-label">ไซส์ตัวเลข<span class="mm">ဂဏန်းဆိုက်</span></div>
-      <div class="sizegrid" id="numGrid"></div>
-    </div>
-
-    <div id="alphaWrap">
-      <div class="grp-label">ไซส์ตัวอักษร<span class="mm">စာလုံးဆိုက်</span></div>
-      <div class="sizegrid" id="alphaGrid"></div>
-    </div>
-
-    <hr class="sep">
-
-    <div class="grp-label" style="margin-top:0">
-      ไซส์อื่น ๆ (พิมพ์เอง) <span class="opt" style="font-weight:400;color:var(--muted)">— เช่น Free Size, 6XL, เบอร์ 30</span>
-      <span class="mm">အခြားဆိုက် (ကိုယ်တိုင်ရိုက်)</span>
-    </div>
-    <div id="customList"></div>
-    <button type="button" class="btn-add" id="addCustom">+ เพิ่มไซส์อื่น<span class="mm">အခြားဆိုက် ထည့်ပါ</span></button>
-
-    <div class="total">
-      <div class="t-l">รวมทั้งหมด<span class="mm">စုစုပေါင်း</span></div>
-      <div class="t-r"><span id="totalNum">0</span><span>ตัว/ထည်</span></div>
-    </div>
-    <div class="breakdown" id="breakdown"></div>
+    <div class="card-h"><h2>รายการเงินเข้า</h2><span class="hint">เพิ่มได้หลายรายการ</span></div>
+    <div id="entries"></div>
+    <button class="add" id="addBtn">＋ เพิ่มรายการ</button>
   </div>
 
-  <div class="foot">FORMKO · ข้อมูลถูกบันทึกลง Google Sheet ในไดรฟ์ของบริษัท<span class="mm">အချက်အလက်များကို ကုမ္ပဏီ Drive ရှိ Google Sheet တွင် သိမ်းသည်</span></div>
-</div>
+  <div class="card">
+    <div class="card-h"><h2>ผู้บันทึก / หมายเหตุ</h2><span class="hint">ไม่บังคับ</span></div>
+    <label class="lbl">ชื่อผู้บันทึก</label>
+    <input type="text" id="recorder" placeholder="เช่น เปีย">
+    <label class="lbl" style="margin-top:12px">หมายเหตุ</label>
+    <textarea id="note" rows="2" placeholder="เช่น ยอดโอนข้ามวัน / ลูกค้าค้างชำระ"></textarea>
+  </div>
+  <div class="foot">ข้อมูลจะถูกบันทึกลง Google Sheet “CF เงิน PAKO”</div>
+</main>
 
-<div class="bottombar">
-  <div class="inner">
-    <button type="button" class="btn btn-ghost" id="btnReset">ล้างฟอร์ม<span class="mm">ဖောင်ရှင်းပါ</span></button>
-    <button type="button" class="btn btn-primary" id="btnSave">บันทึกใบงานแพค<span class="mm">ထုပ်ပိုးဖောင် သိမ်းပါ</span></button>
+<section class="wrap done" id="doneArea">
+  <div class="tick">✓</div>
+  <h3>บันทึกเรียบร้อย</h3>
+  <p id="doneSub">ข้อมูลถูกเขียนลง Google Sheet แล้ว</p>
+  <ul id="doneList"></ul>
+  <button class="again" id="againBtn">บันทึกรายการถัดไป</button>
+</section>
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <div class="msg" id="msg"></div>
+    <div class="prog" id="prog"><i></i></div>
+    <div class="sum">
+      <div><div class="k">เงินสด</div><div class="v cashv" id="sCash">0</div></div>
+      <div><div class="k">QR แม่มณี</div><div class="v qrv" id="sQr">0</div></div>
+      <div><div class="k">เงินโอน</div><div class="v bankv" id="sBank">0</div></div>
+    </div>
+    <div class="total-line"><span>รวมทั้งหมด</span><b id="sTotal">0 ฿</b></div>
+    <button class="submit" id="submitBtn">บันทึกเข้า Google Sheet</button>
   </div>
 </div>
 
-<div class="toast" id="toast"></div>
+<datalist id="provinces"></datalist>
+
+<dialog id="cfgDlg">
+  <h3>ตั้งค่า Web App URL</h3>
+  <p>วาง URL ที่ได้จากการ Deploy Google Apps Script (ลงท้ายด้วย /exec)</p>
+  <input type="text" id="cfgUrl" placeholder="https://script.google.com/macros/s/.../exec">
+  <div id="cfgMsg" style="font-size:12.5px;font-weight:600;margin-top:10px"></div>
+  <div class="actions">
+    <button class="cancel" id="cfgTest">ทดสอบเชื่อมต่อ</button>
+    <button class="ok" id="cfgSave">บันทึก</button>
+  </div>
+  <div class="actions" style="margin-top:8px">
+    <button class="cancel" id="cfgCancel">ปิด</button>
+  </div>
+</dialog>
 
 <script>
-/* =======================================================================
-   ตั้งค่า: วาง URL ของ Google Apps Script Web App ตรงนี้
-   (ได้จากขั้นตอน Deploy > New deployment > Web app)
-   ======================================================================= */
-var API_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+/* =====================================================================
+   ตั้งค่า: วาง URL ของ Google Apps Script Web App (ลงท้าย /exec) ตรงนี้
+   ===================================================================== */
+var CONFIG = {
+  ENDPOINT: 'https://script.google.com/macros/s/AKfycby2c72XWaNPYSBABw01ZnYf9hoWFgsMgKpR3i5-GixOdpeLGUPPGgcw0hNlbltboGEI/exec',
+  TOKEN: 'pako-2026'   // ต้องตรงกับ TOKEN ใน Code.gs
+};
 
-/* override ด้วย ?api=... บน URL ได้ */
-(function(){
-  var q = new URLSearchParams(location.search).get("api");
-  if(q) API_URL = q;
-})();
-
-/* ---------------- ค่าคงที่ ---------------- */
-var NUM_SIZES   = [8,10,12,14,16,18,20,22,24,26,28].map(String);
-var ALPHA_SIZES = ["XS","S","M","L","XL","XXL","3XL","4XL","5XL"];
-var STEP_GROUPS = [
-  [
-    {th:"ตรวจ QC", mm:"QC စစ်ဆေး"},
-    {th:"พับ",     mm:"ခေါက်ခြင်း"},
-    {th:"ใส่ถุง",  mm:"အိတ်ထည့်ခြင်း"},
-    {th:"ตัดป้าย", mm:"တံဆိပ်ဖြတ်ခြင်း"}
-  ]
+/* บัญชีรับโอน — value ที่เขียนลงชีตต้องสะกดเหมือนข้อมูลเดิม เพื่อให้ Pivot รวมกลุ่มถูก */
+var ACCOUNTS = [
+  { owner:'กานต์สิรี',  banks:[ {v:'CIMB', t:'CIMB'}, {v:'LH', t:'LH'}, {v:'ทหารไทย TTB', t:'TTB ทหารไทย'} ] },
+  { owner:'เปีย',       banks:[ {v:'BBL กรุงเทพ', t:'BBL กรุงเทพ'}, {v:'ทหารไทย TTB', t:'TTB ทหารไทย'}, {v:'กรุงศรี', t:'กรุงศรี'} ] },
+  { owner:'ฉันทเชษฐ์',  banks:[ {v:'BBL กรุงเทพ', t:'BBL กรุงเทพ'}, {v:'กสิกร', t:'KBank กสิกร'} ] },
+  { owner:'Formko',     banks:[ {v:'SCB ไทยพาณิชย์', t:'SCB ไทยพาณิชย์'} ] }
 ];
 
-var LS_WORKERS = "formko_packing_workers";
-var LS_DRAFT   = "formko_packing_draft";
+/* กลุ่มไฟล์แนบของแต่ละรายการ */
+var ATT = [
+  { key:'bills', icon:'🧾', label:'ถ่ายรูปบิล',       sub:'ใบเสร็จ / บิลขาย · หลายรูปได้', color:'#1d4ed8', soft:'#eef3ff' },
+  { key:'slips', icon:'💸', label:'ถ่ายรูปสลิปโอน',   sub:'หลักฐานการโอน · หลายรูปได้',   color:'#15803d', soft:'#edfaf1' },
+  { key:'goods', icon:'📦', label:'ถ่ายรูปของที่ส่ง', sub:'สินค้า / พัสดุก่อนส่ง · หลายรูปได้', color:'#b45309', soft:'#fff5e8' }
+];
 
-var $ = function(id){ return document.getElementById(id); };
+var PROVINCES = ['กรุงเทพมหานคร','กระบี่','กาญจนบุรี','กาฬสินธุ์','กำแพงเพชร','ขอนแก่น','จันทบุรี','ฉะเชิงเทรา','ชลบุรี','ชัยนาท','ชัยภูมิ','ชุมพร','เชียงราย','เชียงใหม่','ตรัง','ตราด','ตาก','นครนายก','นครปฐม','นครพนม','นครราชสีมา','นครศรีธรรมราช','นครสวรรค์','นนทบุรี','นราธิวาส','น่าน','บึงกาฬ','บุรีรัมย์','ปทุมธานี','ประจวบคีรีขันธ์','ปราจีนบุรี','ปัตตานี','พระนครศรีอยุธยา','พะเยา','พังงา','พัทลุง','พิจิตร','พิษณุโลก','เพชรบุรี','เพชรบูรณ์','แพร่','ภูเก็ต','มหาสารคาม','มุกดาหาร','แม่ฮ่องสอน','ยโสธร','ยะลา','ร้อยเอ็ด','ระนอง','ระยอง','ราชบุรี','ลพบุรี','ลำปาง','ลำพูน','เลย','ศรีสะเกษ','สกลนคร','สงขลา','สตูล','สมุทรปราการ','สมุทรสงคราม','สมุทรสาคร','สระแก้ว','สระบุรี','สิงห์บุรี','สุโขทัย','สุพรรณบุรี','สุราษฎร์ธานี','สุรินทร์','หนองคาย','หนองบัวลำภู','อ่างทอง','อำนาจเจริญ','อุดรธานี','อุตรดิตถ์','อุทัยธานี','อุบลราชธานี'];
 
-/* ---------------- วันที่วันนี้ ---------------- */
-function todayISO(){
-  var d = new Date();
-  var off = d.getTimezoneOffset();
-  return new Date(d.getTime() - off*60000).toISOString().slice(0,10);
+var TH_MONTH = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+var TH_DAY   = ['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'];
+
+var entries = [];   // {id,type,bank,owner,amount,customer,province,bills[],slips[],goods[]}
+var seq = 0;
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function fmt(n){ return (Number(n)||0).toLocaleString('en-US',{maximumFractionDigits:2}); }
+function toISO(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function parseISO(s){ var p=(s||'').split('-'); return new Date(+p[0],+p[1]-1,+p[2]); }
+function beString(d){ return (d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+543); }
+function thaiLong(d){ return TH_DAY[d.getDay()]+' '+d.getDate()+' '+TH_MONTH[d.getMonth()]+' '+(d.getFullYear()+543); }
+function endpoint(){
+  var saved=null; try{ saved=localStorage.getItem('pako_endpoint'); }catch(e){}
+  return saved || CONFIG.ENDPOINT;
 }
-function thaiDateLabel(iso){
-  if(!iso) return "";
-  var p  = iso.split("-");
-  var d  = Number(p[2]), mi = Number(p[1])-1, y = Number(p[0]);
-  var mT = ["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
-  var mM = ["ဇန်နဝါရီ","ဖေဖော်ဝါရီ","မတ်","ဧပြီ","မေ","ဇွန်","ဇူလိုင်","သြဂုတ်","စက်တင်ဘာ","အောက်တိုဘာ","နိုဝင်ဘာ","ဒီဇင်ဘာ"];
-  return d + " " + mT[mi] + " " + (y+543) + " · " + d + " " + mM[mi] + " " + y;
+
+/* ---------- date ---------- */
+function setDate(offset){ var d=new Date(); d.setDate(d.getDate()+offset); $('saleDate').value=toISO(d); renderDate(); }
+function renderDate(){
+  var v=$('saleDate').value;
+  $('dateTh').textContent = v ? thaiLong(parseISO(v))+'  ('+beString(parseISO(v))+')' : '—';
 }
 
-/* ---------------- สร้างช่องไซส์ ---------------- */
-function buildGrid(el, sizes, prefix){
-  el.innerHTML = "";
-  sizes.forEach(function(s){
-    var box = document.createElement("div");
-    box.className = "cellbox";
-    box.innerHTML =
-      '<div class="name">'+s+'</div>' +
-      '<input class="qty" type="number" min="0" step="1" inputmode="numeric" ' +
-      'placeholder="0" data-size="'+s+'" id="'+prefix+'_'+s+'">';
-    el.appendChild(box);
-  });
+/* ---------- entries ---------- */
+function addEntry(type){
+  entries.push({ id:++seq, type:type||'cash', bank:'', owner:'', amount:'',
+                 customer:'', province:'', bills:[], slips:[], goods:[] });
+  renderEntries();
 }
-buildGrid($("numGrid"), NUM_SIZES, "n");
-buildGrid($("alphaGrid"), ALPHA_SIZES, "a");
-
-/* ---------------- แท็บไซส์ ---------------- */
-var currentMode = "alpha";
-function setMode(mode){
-  currentMode = mode;
-  document.querySelectorAll(".tab").forEach(function(t){
-    t.classList.toggle("active", t.dataset.mode === mode);
-  });
-  $("numWrap").classList.toggle("hidden", !(mode==="num" || mode==="all"));
-  $("alphaWrap").classList.toggle("hidden", !(mode==="alpha" || mode==="all"));
-  recalc();
+function removeEntry(id){
+  entries = entries.filter(function(e){ return e.id!==id; });
+  if(!entries.length) addEntry('cash'); else renderEntries();
+  updateSum();
 }
-document.querySelectorAll(".tab").forEach(function(t){
-  t.addEventListener("click", function(){ setMode(t.dataset.mode); });
-});
-
-/* ---------------- ไซส์อื่น ๆ ---------------- */
-function addCustomRow(name, qty){
-  var row = document.createElement("div");
-  row.className = "customrow";
-  row.innerHTML =
-    '<input class="inp cs-name" type="text" placeholder="ชื่อไซส์/ဆိုက်အမည်">' +
-    '<input class="inp cs-qty" type="number" min="0" step="1" inputmode="numeric" placeholder="จำนวน">' +
-    '<button type="button" class="btn-del" title="ลบ">&times;</button>';
-  $("customList").appendChild(row);
-  if(name) row.querySelector(".cs-name").value = name;
-  if(qty)  row.querySelector(".cs-qty").value  = qty;
-  row.querySelector(".btn-del").addEventListener("click", function(){ row.remove(); recalc(); });
-  row.addEventListener("input", recalc);
-  return row;
-}
-$("addCustom").addEventListener("click", function(){ addCustomRow(); });
-
-/* ---------------- chips ---------------- */
-function renderChips(container, list, targetInput, appendMode){
-  container.innerHTML = "";
-  list.forEach(function(txt){
-    var b = document.createElement("button");
-    b.type = "button"; b.className = "chip"; b.textContent = txt;
-    b.addEventListener("click", function(){
-      var el = $(targetInput);
-      if(appendMode){
-        var cur = el.value.trim();
-        if(!cur) el.value = txt;
-        else if(cur.split(/\s*,\s*/).indexOf(txt) === -1) el.value = cur + ", " + txt;
-      }else{
-        el.value = txt;
-      }
-      el.classList.remove("bad");
-      saveDraft();
+function bankOptions(sel){
+  var h='<option value="">— เลือกธนาคาร / บัญชี —</option>';
+  ACCOUNTS.forEach(function(g){
+    h+='<optgroup label="'+g.owner+'">';
+    g.banks.forEach(function(b){
+      var val=b.v+'|'+g.owner;
+      h+='<option value="'+esc(val)+'"'+(sel===val?' selected':'')+'>'+b.t+' — '+g.owner+'</option>';
     });
-    container.appendChild(b);
+    h+='</optgroup>';
   });
+  return h;
 }
-function renderStepChips(){
-  var box = $("stepChips");
-  box.innerHTML = "";
-  STEP_GROUPS.forEach(function(grp, gi){
-    var row = document.createElement("div");
-    row.className = "chiprow" + (gi ? " sepline" : "");
-    grp.forEach(function(st){
-      var txt = st.th;
-      var b = document.createElement("button");
-      b.type = "button"; b.className = "chip";
-      b.dataset.val = txt;
-      b.appendChild(document.createTextNode(st.th));
-      var mm = document.createElement("span");
-      mm.className = "mm"; mm.textContent = st.mm;
-      b.appendChild(mm);
-      b.addEventListener("click", function(){
-        var el = $("f_step");
-        var cur = el.value.trim();
-        var parts = cur ? cur.split(/\s*,\s*/).filter(Boolean) : [];
-        var at = parts.indexOf(txt);
-        if(at === -1){ parts.push(txt); b.classList.add("on"); }
-        else { parts.splice(at,1); b.classList.remove("on"); }
-        el.value = parts.join(", ");
-        el.classList.remove("bad");
-        syncStepChips();
-        saveDraft();
+function thumbsHtml(list, key){
+  if(!list.length) return '';
+  var h = list.map(function(f,i){
+    var inner = f.preview
+      ? '<img src="'+f.preview+'" alt="">'
+      : '<div class="doc">📄<br>'+esc(f.name.slice(0,14))+'</div>';
+    return '<div class="thumb">'+inner+'<button class="x" data-rm="'+i+'">×</button></div>';
+  }).join('');
+  return h + '<button class="thumb more" data-add="'+key+'" title="เพิ่มรูป">＋</button>';
+}
+function renderEntries(){
+  var box=$('entries'); box.innerHTML='';
+  entries.forEach(function(e,i){
+    var d=document.createElement('div');
+    d.className='entry '+e.type;
+    var attHtml = '<div class="att-title">แนบรูป (ไม่บังคับ)</div>' + ATT.map(function(a){
+      var n = e[a.key].length;
+      return '<div class="att-g" data-grp="'+a.key+'">'+
+        '<button class="drop'+(n?' has':'')+'" data-add="'+a.key+'" style="--g:'+a.color+';--gs:'+a.soft+'">'+
+          '<span class="ic">'+a.icon+'</span>'+
+          '<span class="tx"><b>'+a.label+'</b><small>'+a.sub+'</small></span>'+
+          (n ? '<span class="cnt">'+n+' รูป</span>' : '<span class="plus">＋</span>')+
+        '</button>'+
+        '<div class="thumbs">'+thumbsHtml(e[a.key], a.key)+'</div>'+
+        '<input type="file" accept="image/*,.pdf,.heic" multiple style="display:none" data-file="'+a.key+'">'+
+      '</div>';
+    }).join('');
+
+    d.innerHTML =
+      '<div class="entry-top"><span class="entry-no">รายการที่ '+(i+1)+'</span>'+
+        (entries.length>1 ? '<button class="del" data-act="del">×</button>' : '')+'</div>'+
+      '<div class="seg">'+
+        '<button data-type="cash" class="'+(e.type==='cash'?'on':'')+'">เงินสด</button>'+
+        '<button data-type="qr" class="'+(e.type==='qr'?'on':'')+'">QR แม่มณี</button>'+
+        '<button data-type="bank" class="'+(e.type==='bank'?'on':'')+'">เงินโอน</button>'+
+      '</div>'+
+      '<div class="row2">'+
+        (e.type==='bank' ? '<select data-act="bank">'+bankOptions(e.bank?e.bank+'|'+e.owner:'')+'</select>' : '')+
+        '<div class="amt-wrap"><input type="text" inputmode="decimal" data-act="amt" placeholder="0" value="'+(e.amount!==''?fmt(e.amount):'')+'"><span class="baht">บาท</span></div>'+
+        '<div class="two">'+
+          '<div><label class="lbl">ชื่อลูกค้า</label><input type="text" data-act="cus" value="'+esc(e.customer)+'" placeholder="ชื่อ / ร้าน"></div>'+
+          '<div><label class="lbl">จังหวัด</label><input type="text" list="provinces" data-act="prov" value="'+esc(e.province)+'" placeholder="เลือก / พิมพ์"></div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="att">'+attHtml+'</div>';
+    box.appendChild(d);
+
+    d.querySelectorAll('.seg button').forEach(function(b){
+      b.onclick=function(){ e.type=b.getAttribute('data-type'); if(e.type!=='bank'){e.bank='';e.owner='';} renderEntries(); updateSum(); };
+    });
+    var sel=d.querySelector('[data-act=bank]');
+    if(sel) sel.onchange=function(){ var p=sel.value.split('|'); e.bank=p[0]||''; e.owner=p[1]||''; };
+    var amt=d.querySelector('[data-act=amt]');
+    amt.oninput=function(){
+      var raw=amt.value.replace(/[^0-9.]/g,''); e.amount=raw;
+      var parts=raw.split('.');
+      amt.value = raw==='' ? '' : fmt(parts[0]) + (parts.length>1 ? '.'+parts[1].slice(0,2) : '');
+      updateSum();
+    };
+    d.querySelector('[data-act=cus]').oninput=function(ev){ e.customer=ev.target.value; };
+    d.querySelector('[data-act=prov]').oninput=function(ev){ e.province=ev.target.value; };
+    var del=d.querySelector('[data-act=del]');
+    if(del) del.onclick=function(){ removeEntry(e.id); };
+
+    d.querySelectorAll('.att-g').forEach(function(g){
+      var key=g.getAttribute('data-grp');
+      var input=g.querySelector('[data-file]');
+      g.querySelectorAll('[data-add]').forEach(function(btn){ btn.onclick=function(){ input.click(); }; });
+      input.onchange=function(){
+        var files=Array.prototype.slice.call(input.files||[]);
+        if(!files.length) return;
+        var pending=files.length;
+        files.forEach(function(f){
+          prepareFile(f,function(obj){ e[key].push(obj); if(--pending===0) renderEntries(); });
+        });
+      };
+      g.querySelectorAll('[data-rm]').forEach(function(btn){
+        btn.onclick=function(){ e[key].splice(+btn.getAttribute('data-rm'),1); renderEntries(); };
       });
-      row.appendChild(b);
     });
-    box.appendChild(row);
-  });
-}
-function syncStepChips(){
-  var parts = $("f_step").value.split(/\s*,\s*/).map(function(x){ return x.trim(); });
-  $("stepChips").querySelectorAll(".chip").forEach(function(b){
-    b.classList.toggle("on", parts.indexOf(b.dataset.val) !== -1);
-  });
-}
-renderStepChips();
-$("f_step").addEventListener("input", syncStepChips);
-
-function loadWorkers(){
-  try{ return JSON.parse(localStorage.getItem(LS_WORKERS) || "[]"); }catch(e){ return []; }
-}
-function rememberWorker(name){
-  if(!name) return;
-  var list = loadWorkers().filter(function(x){ return x !== name; });
-  list.unshift(name);
-  list = list.slice(0,8);
-  try{ localStorage.setItem(LS_WORKERS, JSON.stringify(list)); }catch(e){}
-  renderChips($("workerChips"), list, "f_worker", false);
-}
-renderChips($("workerChips"), loadWorkers(), "f_worker", false);
-
-/* ---------------- รวมยอด ---------------- */
-function collectItems(){
-  var items = [];
-  function pull(wrapId){
-    if($(wrapId).classList.contains("hidden")) return;
-    $(wrapId).querySelectorAll("input.qty").forEach(function(i){
-      var q = parseInt(i.value, 10);
-      if(q > 0) items.push({ size: i.dataset.size, qty: q });
-      i.closest(".cellbox").classList.toggle("filled", q > 0);
-    });
-  }
-  pull("numWrap"); pull("alphaWrap");
-  $("customList").querySelectorAll(".customrow").forEach(function(r){
-    var n = r.querySelector(".cs-name").value.trim();
-    var q = parseInt(r.querySelector(".cs-qty").value, 10);
-    if(n && q > 0) items.push({ size: n, qty: q });
-  });
-  return items;
-}
-function recalc(){
-  var items = collectItems();
-  var total = items.reduce(function(a,b){ return a + b.qty; }, 0);
-  $("totalNum").textContent = total.toLocaleString("en-US");
-  $("breakdown").textContent = items.length
-    ? items.map(function(i){ return i.size + "=" + i.qty; }).join(", ")
-    : "";
-  saveDraft();
-  return { items: items, total: total };
-}
-document.addEventListener("input", function(e){
-  if(e.target.matches("input.qty, .cs-name, .cs-qty")) recalc();
-});
-
-/* ---------------- draft (กันเผลอปิดหน้า) ---------------- */
-var draftTimer = null;
-function saveDraft(){
-  clearTimeout(draftTimer);
-  draftTimer = setTimeout(function(){
-    try{ localStorage.setItem(LS_DRAFT, JSON.stringify(collect(true))); }catch(e){}
-  }, 250);
-}
-["f_date","f_order","f_model","f_color","f_step","f_worker","f_note"].forEach(function(id){
-  $(id).addEventListener("input", function(){ $(id).classList.remove("bad"); saveDraft(); });
-});
-
-function restoreDraft(){
-  var raw;
-  try{ raw = localStorage.getItem(LS_DRAFT); }catch(e){ return; }
-  if(!raw) return;
-  var d; try{ d = JSON.parse(raw); }catch(e){ return; }
-  if(!d) return;
-  $("f_order").value  = d.order  || "";
-  $("f_model").value  = d.model  || "";
-  $("f_color").value  = d.color  || "";
-  $("f_step").value   = d.step   || "";
-  $("f_worker").value = d.worker || "";
-  $("f_note").value   = d.note   || "";
-  syncStepChips();
-  if(d.mode) setMode(d.mode);
-  (d.items || []).forEach(function(it){
-    var el = $("a_" + it.size) || $("n_" + it.size);
-    if(el) el.value = it.qty;
-    else addCustomRow(it.size, it.qty);
   });
 }
 
-/* ---------------- เก็บข้อมูลส่ง ---------------- */
-function collect(quiet){
-  var r = quiet ? { items: collectItems(), total: 0 } : recalc();
-  if(quiet) r.total = r.items.reduce(function(a,b){ return a+b.qty; }, 0);
-  return {
-    date:   $("f_date").value,
-    order:  $("f_order").value.trim(),
-    model:  $("f_model").value.trim(),
-    color:  $("f_color").value.trim(),
-    step:   $("f_step").value.trim(),
-    worker: $("f_worker").value.trim(),
-    note:   $("f_note").value.trim(),
-    mode:   currentMode,
-    items:  r.items,
-    total:  r.total,
-    sizeText: r.items.map(function(i){ return i.size + "=" + i.qty; }).join(", ")
+/* ---------- file: ย่อรูปก่อนส่ง ---------- */
+function prepareFile(f, cb){
+  var isImg = /^image\//.test(f.type) && !/heic|heif/i.test(f.type);
+  var reader = new FileReader();
+  reader.onload=function(){
+    if(!isImg){
+      cb({ name:f.name, mime:f.type||'application/octet-stream', data:String(reader.result).split(',')[1], preview:null });
+      return;
+    }
+    var img=new Image();
+    img.onload=function(){
+      var max=1600,w=img.width,h=img.height;
+      if(Math.max(w,h)>max){ var r=max/Math.max(w,h); w=Math.round(w*r); h=Math.round(h*r); }
+      var c=document.createElement('canvas'); c.width=w; c.height=h;
+      c.getContext('2d').drawImage(img,0,0,w,h);
+      var url=c.toDataURL('image/jpeg',.82);
+      cb({ name:f.name.replace(/\.[^.]+$/,'')+'.jpg', mime:'image/jpeg', data:url.split(',')[1], preview:url });
+    };
+    img.onerror=function(){ cb({ name:f.name, mime:f.type, data:String(reader.result).split(',')[1], preview:null }); };
+    img.src=String(reader.result);
   };
+  reader.readAsDataURL(f);
 }
 
-/* ---------------- toast ---------------- */
-var toastTimer = null;
-function toast(msg, kind){
-  var t = $("toast");
-  t.textContent = msg;
-  t.className = "toast show " + (kind || "");
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(function(){ t.className = "toast " + (kind || ""); }, 3200);
-}
-
-/* ---------------- validate ---------------- */
-function validate(d){
-  var miss = [];
-  var map = {
-    date:"วันที่/ရက်စွဲ", order:"เลขออเดอร์/အော်ဒါနံပါတ်", model:"รุ่น/မော်ဒယ်",
-    color:"สี-ลาย/အရောင်", step:"ขั้นตอนแพค/ထုပ်ပိုးအဆင့်", worker:"ชื่อพนักงาน/ဝန်ထမ်း"
-  };
-  Object.keys(map).forEach(function(k){
-    if(!d[k]){ miss.push(map[k]); $("f_" + k).classList.add("bad"); }
+/* ---------- summary ---------- */
+function updateSum(){
+  var c=0,q=0,b=0;
+  entries.forEach(function(e){
+    var v=parseFloat(e.amount)||0;
+    if(e.type==='cash') c+=v; else if(e.type==='qr') q+=v; else b+=v;
   });
-  if(d.total <= 0) miss.push("จำนวนอย่างน้อย 1 ตัว/အနည်းဆုံး ၁ ထည်");
-  return miss;
+  $('sCash').textContent=fmt(c); $('sQr').textContent=fmt(q); $('sBank').textContent=fmt(b);
+  $('sTotal').textContent=fmt(c+q+b)+' ฿';
 }
 
-/* ---------------- บันทึก ---------------- */
-$("btnSave").addEventListener("click", function(){
-  var d = collect();
-  var miss = validate(d);
-  if(miss.length){
-    toast("กรุณากรอก / ကျေးဇူးပြု၍ ဖြည့်ပါ: " + miss.join(", "), "err");
-    var first = document.querySelector(".inp.bad");
-    if(first) first.scrollIntoView({ behavior:"smooth", block:"center" });
-    return;
+/* ---------- submit ---------- */
+function showErr(t){ var m=$('msg'); m.textContent=t; m.className='msg err'; setTimeout(function(){ m.className='msg'; },6000); }
+
+function validate(){
+  if(!$('saleDate').value) return 'กรุณาเลือกวันที่ของยอดขาย';
+  var ok=entries.filter(function(e){ return (parseFloat(e.amount)||0)>0; });
+  if(!ok.length) return 'กรุณากรอกจำนวนเงินอย่างน้อย 1 รายการ';
+  for(var i=0;i<entries.length;i++){
+    var e=entries[i], v=parseFloat(e.amount)||0;
+    if(v>0 && e.type==='bank' && !e.bank) return 'รายการที่ '+(i+1)+': กรุณาเลือกธนาคาร / บัญชี';
   }
-  if(!API_URL || API_URL.indexOf("PASTE_YOUR") === 0){
-    toast("ยังไม่ได้ตั้งค่า URL ของ Google Sheet / Google Sheet URL မသတ်မှတ်ရသေးပါ", "err");
-    $("setupBanner").classList.remove("hidden");
-    return;
+  if(!endpoint() || endpoint().indexOf('script.google.com')<0) return 'ยังไม่ได้ตั้งค่า Web App URL — กดปุ่ม ⚙ ด้านบนขวา';
+  return '';
+}
+
+function strip(list){ return list.map(function(f){ return { name:f.name, mime:f.mime, data:f.data }; }); }
+
+function submit(){
+  var err=validate(); if(err){ showErr(err); return; }
+  var d=parseISO($('saleDate').value);
+  var rows=entries.filter(function(e){ return (parseFloat(e.amount)||0)>0; }).map(function(e){
+    return {
+      type:e.type,
+      bank: e.type==='bank' ? e.bank : '',
+      owner: e.type==='bank' ? e.owner : '',
+      amount: parseFloat(e.amount)||0,
+      customer: e.customer.trim(),
+      province: e.province.trim(),
+      bills: strip(e.bills), slips: strip(e.slips), goods: strip(e.goods)
+    };
+  });
+  var payload={
+    token:CONFIG.TOKEN,
+    uid: 'w'+Date.now()+'-'+Math.random().toString(36).slice(2,8),   // กันบันทึกซ้ำเวลาส่งสองช่องทาง
+    dateBE:beString(d), month:d.getMonth()+1, year:d.getFullYear(),
+    recorder:$('recorder').value.trim(), note:$('note').value.trim(), rows:rows
+  };
+
+  var btn=$('submitBtn'); btn.disabled=true; btn.textContent='กำลังบันทึก…';
+  var p=$('prog'); p.style.display='block'; var bar=p.querySelector('i'); var pct=8;
+  bar.style.width=pct+'%';
+  var tick=setInterval(function(){ pct=Math.min(pct+5,88); bar.style.width=pct+'%'; },500);
+
+  function finish(res){
+    clearInterval(tick); bar.style.width='100%';
+    setTimeout(function(){ showDone(payload,res); },250);
+  }
+  function fail(msg){
+    clearInterval(tick); p.style.display='none'; bar.style.width='0';
+    btn.disabled=false; btn.textContent='บันทึกเข้า Google Sheet';
+    showErr(msg);
   }
 
-  var btn = $("btnSave");
-  btn.disabled = true;
-  var oldHTML = btn.innerHTML;
-  btn.innerHTML = 'กำลังบันทึก…<span class="mm">သိမ်းဆည်းနေသည်…</span>';
-
-  fetch(API_URL, {
-    method: "POST",
-    headers: { "Content-Type": "text/plain;charset=utf-8" },
-    body: JSON.stringify(d)
-  })
-  .then(function(res){ return res.json().catch(function(){ return { status:"ok" }; }); })
+  // ช่องทางที่ 1: fetch ปกติ
+  fetch(endpoint(),{ method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(payload) })
+  .then(function(r){ return r.json(); })
   .then(function(res){
-    if(res && res.status === "error") throw new Error(res.message || "บันทึกไม่สำเร็จ");
-    rememberWorker(d.worker);
-    toast("บันทึกเรียบร้อย · รวม " + d.total + " ตัว / သိမ်းပြီးပါပြီ", "ok");
-    softReset();
+    if(!res || res.ok!==true) throw new Error((res && res.error) || 'บันทึกไม่สำเร็จ');
+    finish(res);
   })
-  .catch(function(err){
-    toast("บันทึกไม่สำเร็จ / မသိမ်းနိုင်ပါ: " + (err.message || "เช็คอินเทอร์เน็ต / အင်တာနက်စစ်ပါ"), "err");
-  })
-  .finally(function(){
-    btn.disabled = false;
-    btn.innerHTML = oldHTML;
+  .catch(function(){
+    // ช่องทางที่ 2 (สำรอง): ส่งผ่านฟอร์ม + iframe — ใช้ได้แม้เบราว์เซอร์บล็อก CORS (มักเจอบน iPhone)
+    btn.textContent='กำลังส่งอีกช่องทาง…';
+    submitViaForm(payload, finish, function(e2){
+      fail('ส่งไม่สำเร็จ: '+e2.message+' — เช็คว่า Deploy ตั้ง “Who has access: Anyone” และใช้ URL /exec ล่าสุด');
+    });
   });
-});
-
-/* ---------------- ล้างฟอร์ม ---------------- */
-function clearSizes(){
-  document.querySelectorAll("input.qty").forEach(function(i){
-    i.value = "";
-    i.closest(".cellbox").classList.remove("filled");
-  });
-  $("customList").innerHTML = "";
 }
-function softReset(){
-  /* เก็บ วันที่ + ออเดอร์ + รุ่น + สี + พนักงาน ไว้ เพราะมักกรอกงานต่อเนื่อง */
-  $("f_step").value = "";
-  $("f_note").value = "";
-  syncStepChips();
-  clearSizes();
-  try{ localStorage.removeItem(LS_DRAFT); }catch(e){}
-  recalc();
-  window.scrollTo({ top:0, behavior:"smooth" });
-}
-$("btnReset").addEventListener("click", function(){
-  if(!confirm("ล้างข้อมูลทั้งหมดในฟอร์ม?\nဖောင်ထဲရှိ အချက်အလက်အားလုံး ဖျက်မလား?")) return;
-  ["f_order","f_model","f_color","f_step","f_worker","f_note"].forEach(function(id){
-    $(id).value = ""; $(id).classList.remove("bad");
-  });
-  $("f_date").value = todayISO();
-  $("f_date").classList.remove("bad");
-  syncStepChips();
-  clearSizes();
-  try{ localStorage.removeItem(LS_DRAFT); }catch(e){}
-  recalc();
-  toast("ล้างฟอร์มแล้ว / ဖောင်ရှင်းပြီးပါပြီ");
-});
 
-/* ---------------- init ---------------- */
-$("f_date").value = todayISO();
-$("f_date").addEventListener("change", function(){
-  $("todayLabel").textContent = thaiDateLabel($("f_date").value);
-});
-$("todayLabel").textContent = thaiDateLabel($("f_date").value);
-if(!API_URL || API_URL.indexOf("PASTE_YOUR") === 0) $("setupBanner").classList.remove("hidden");
-restoreDraft();
-recalc();
+/* ส่งข้อมูลผ่านฟอร์มเข้า iframe แล้วรับผลกลับด้วย postMessage (เลี่ยงปัญหา CORS) */
+function submitViaForm(payload, onDone, onErr, urlOverride){
+  var name = 'pakoFrame'+Date.now();
+  var ifr  = document.createElement('iframe');
+  ifr.name = name; ifr.style.display='none';
+  var form = document.createElement('form');
+  form.method='POST'; form.action=(urlOverride || endpoint()); form.target=name; form.style.display='none';
+  var ta = document.createElement('textarea'); ta.name='payload'; ta.value=JSON.stringify(payload);
+  form.appendChild(ta);
+  document.body.appendChild(ifr); document.body.appendChild(form);
+
+  var done=false, timer=null;
+  function cleanup(){
+    window.removeEventListener('message', onMsg);
+    if(timer) clearTimeout(timer);
+    setTimeout(function(){ try{ ifr.parentNode.removeChild(ifr); form.parentNode.removeChild(form); }catch(e){} }, 1500);
+  }
+  function onMsg(ev){
+    var d = ev.data;
+    if(!d || typeof d!=='object' || !d.__pako || done) return;
+    done=true; cleanup();
+    if(d.ok===true) onDone(d); else onErr(new Error(d.error||'บันทึกไม่สำเร็จ'));
+  }
+  window.addEventListener('message', onMsg);
+  timer = setTimeout(function(){
+    if(done) return; done=true; cleanup();
+    onErr(new Error('หมดเวลารอการตอบกลับ'));
+  }, 90000);
+  form.submit();
+}
+
+function showDone(payload){
+  $('formArea').style.display='none'; $('bar').style.display='none';
+  var ul=$('doneList'); ul.innerHTML=''; var total=0, files=0;
+  payload.rows.forEach(function(r){
+    total+=r.amount; files += r.bills.length + r.slips.length + r.goods.length;
+    var name = r.type==='cash' ? 'เงินสด' : (r.type==='qr' ? 'QR แม่มณี' : r.bank+' — '+r.owner);
+    if(r.customer) name += ' · '+r.customer;
+    if(r.province) name += ' ('+r.province+')';
+    var li=document.createElement('li');
+    li.innerHTML='<span>'+esc(name)+'</span><b>'+fmt(r.amount)+' ฿</b>';
+    ul.appendChild(li);
+  });
+  var li=document.createElement('li');
+  li.innerHTML='<span style="font-weight:700">รวม</span><b>'+fmt(total)+' ฿</b>';
+  ul.appendChild(li);
+  $('doneSub').textContent='วันที่ '+payload.dateBE+' · '+payload.rows.length+' รายการ'+(files?' · แนบไฟล์ '+files+' รูป':'')+' ถูกเขียนลงชีตแล้ว';
+  $('doneArea').style.display='block';
+  window.scrollTo(0,0);
+}
+
+function reset(){
+  entries=[]; addEntry('cash'); $('note').value=''; updateSum();
+  $('doneArea').style.display='none'; $('formArea').style.display='block'; $('bar').style.display='block';
+  var btn=$('submitBtn'); btn.disabled=false; btn.textContent='บันทึกเข้า Google Sheet';
+  $('prog').style.display='none'; $('prog').querySelector('i').style.width='0';
+  window.scrollTo(0,0);
+}
+
+/* ---------- init ---------- */
+$('provinces').innerHTML = PROVINCES.map(function(p){ return '<option value="'+p+'">'; }).join('');
+document.querySelectorAll('.chip').forEach(function(c){ c.onclick=function(){ setDate(parseInt(c.getAttribute('data-day'),10)); }; });
+$('saleDate').onchange=renderDate;
+$('addBtn').onclick=function(){ addEntry('bank'); window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}); };
+$('submitBtn').onclick=submit;
+$('againBtn').onclick=reset;
+$('gear').onclick=function(){ try{ $('cfgUrl').value=localStorage.getItem('pako_endpoint')||''; }catch(e){} $('cfgDlg').showModal(); };
+$('cfgCancel').onclick=function(){ $('cfgDlg').close(); };
+$('cfgTest').onclick=function(){
+  var url = ($('cfgUrl').value.trim() || endpoint());
+  var m = $('cfgMsg');
+  if(url.indexOf('script.google.com')<0){ m.style.color='#b91c1c'; m.textContent='URL ไม่ถูกต้อง (ต้องลงท้าย /exec)'; return; }
+  m.style.color='#8b7565'; m.textContent='กำลังทดสอบ…';
+  var ping = { token:CONFIG.TOKEN, uid:'ping-'+Date.now(), dateBE:'', month:0, year:0, rows:[] };
+  var settled=false;
+  function good(how){ if(settled) return; settled=true; m.style.color='#15803d'; m.textContent='เชื่อมต่อได้ ✅ ('+how+') — ใช้งานได้เลย'; }
+  function bad(){ if(settled) return; settled=true; m.style.color='#b91c1c';
+    m.textContent='เชื่อมต่อไม่ได้ ❌ ตรวจ Deploy → Manage deployments → Who has access: Anyone'; }
+  fetch(url,{ method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(ping) })
+    .then(function(r){ return r.json(); })
+    .then(function(){ good('ช่องทางหลัก'); })
+    .catch(function(){
+      submitViaForm(ping, function(){ good('ช่องทางสำรอง'); },
+        function(e2){ if(e2 && /หมดเวลา/.test(e2.message)) bad(); else good('ช่องทางสำรอง'); }, url);
+      setTimeout(bad, 30000);
+    });
+};
+$('cfgSave').onclick=function(){ try{ localStorage.setItem('pako_endpoint',$('cfgUrl').value.trim()); }catch(e){} $('cfgDlg').close(); };
+try{ var rc=localStorage.getItem('pako_recorder'); if(rc) $('recorder').value=rc; }catch(e){}
+$('recorder').onchange=function(){ try{ localStorage.setItem('pako_recorder',$('recorder').value.trim()); }catch(e){} };
+
+setDate(-1);           // ค่าเริ่มต้น = เมื่อวาน
+addEntry('cash');
+updateSum();
 </script>
 </body>
 </html>
